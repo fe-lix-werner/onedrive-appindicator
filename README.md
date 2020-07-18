@@ -7,6 +7,12 @@ Gnome3 AppIndicator for [skilion`s OneDrive Free Client](https://github.com/skil
  cd onedrive-appindicator
  ./install.sh
 ```
+## Uninstallation
+ ```
+ git clone git@github.com:fe-lix-werner/onedrive-appindicator.git
+ cd onedrive-appindicator
+ ./uninstall.sh
+```
 
 ## Icon
 
