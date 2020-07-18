@@ -27,9 +27,6 @@ class Indicator:
         else:
             self.set_inactive_icon()
 
-    def quit(self,source):
-        gtk.main_quit()
-
     def set_active_icon(self):
         self.indicator.set_icon_full(APPINDICATOR_ICON_ON,'')
 
