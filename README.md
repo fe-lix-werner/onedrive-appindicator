@@ -14,6 +14,7 @@ bi-cloud-fill from https://iconify.design/icon-sets/bi/cloud-fill.html.
 
 Logo if client is online:
 ![on icon](https://github.com/fe-lix-werner/onedrive-appindicator/blob/master/code/on.svg)
+<img src="https://github.com/fe-lix-werner/onedrive-appindicator/blob/master/code/on.svg">
 
 Logo if client is offline:
 ![off icon](https://github.com/fe-lix-werner/onedrive-appindicator/blob/master/code/off.svg)
