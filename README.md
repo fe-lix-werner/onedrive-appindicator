@@ -13,7 +13,7 @@ Gnome3 AppIndicator for [skilion`s OneDrive Free Client](https://github.com/skil
 bi-cloud-fill from https://iconify.design/icon-sets/bi/cloud-fill.html.
 
 Logo if client is online:
-![](https://github.com/fe-lix-werner/onedrive-appindicator/blob/master/code/on.svg)
+![on icon](https://github.com/fe-lix-werner/onedrive-appindicator/blob/master/code/on.svg)
 
 Logo if client is offline:
-![](https://github.com/fe-lix-werner/onedrive-appindicator/blob/master/code/off.svg)
+![off icon](https://github.com/fe-lix-werner/onedrive-appindicator/blob/master/code/off.svg)
