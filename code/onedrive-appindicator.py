@@ -1,6 +1,5 @@
 import gi
 import os
-import time
 import threading
 
 gi.require_version('Gtk', '3.0')
