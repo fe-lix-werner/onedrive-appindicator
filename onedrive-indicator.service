@@ -1,0 +1,6 @@
+[Unit]
+Description=OneDrive Indicator
+
+[Service]
+# Command to execute when the service is started
+ExecStart=/usr/bin/python /opt/onedrive-indicator/onedrive-appindicator.py
