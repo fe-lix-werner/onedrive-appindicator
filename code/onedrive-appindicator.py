@@ -9,7 +9,7 @@ from gi.repository import AppIndicator3 as appindicator
 from gi.repository import Gtk as gtk
 
 APPINDICATOR_ICON_ON = "/opt/onedrive-indicator/on.svg"
-APPINDICATOR_ICON_OFF = "/opt/onedrive-indicator/off.png"
+APPINDICATOR_ICON_OFF = "/opt/onedrive-indicator/off.svg"
 APPINDICATOR_ID = "onedrive-indicator"
 
 class Indicator:
