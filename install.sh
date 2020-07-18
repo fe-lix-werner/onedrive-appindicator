@@ -19,6 +19,7 @@ install_indicator()
     cp onedrive-indicator.service $HOME/.config/systemd/user/
 
 		# Starting the service
+		systemctl enable --user onedrive-indicator.service
 		systemctl start --user onedrive-indicator.service
 }
 
