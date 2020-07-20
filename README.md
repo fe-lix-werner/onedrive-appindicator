@@ -9,6 +9,12 @@ git clone git@github.com:fe-lix-werner/onedrive-appindicator.git
 cd onedrive-appindicator
 ./install.sh
 ```
+## Uninstall
+ ```
+ git clone git@github.com:fe-lix-werner/onedrive-appindicator.git
+ cd onedrive-appindicator
+ ./uninstall.sh
+```
 
 ## Icon
 
