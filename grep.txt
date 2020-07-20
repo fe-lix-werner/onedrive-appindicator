@@ -1,0 +1,2 @@
+journalctl --user-unit onedrive | grep -E -o "Uploading..*|Downloading..*|Moving..*"
+journalctl --user-unit onedrive| sort -r | grep -E -o "Uploading..*|Downloading..*|Moving..*" | tail -n 5
