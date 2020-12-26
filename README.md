@@ -9,11 +9,13 @@ git clone git@github.com:fe-lix-werner/onedrive-appindicator.git
 cd onedrive-appindicator
 ./install.sh
 ```
+
 ## Uninstall
- ```
- git clone git@github.com:fe-lix-werner/onedrive-appindicator.git
- cd onedrive-appindicator
- ./uninstall.sh
+
+```
+git clone git@github.com:fe-lix-werner/onedrive-appindicator.git
+cd onedrive-appindicator
+./uninstall.sh
 ```
 
 ## Icon
@@ -28,6 +30,6 @@ Logo if client is offline:
 
 ## TODO
 
-[] Appindicator shows if smth is downloading or uploading rn
-[] Add a quit menu
-[] Show when cliciking what the last file was that was uploaded or downloaded
+- [x] Appindicator shows if smth is downloading or uploading rn
+- [] Add a quit menu
+- [] Show when cliciking what the last file was that was uploaded or downloaded
