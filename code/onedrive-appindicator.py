@@ -22,7 +22,11 @@ class Indicator:
     def __init__(self):
         self.indicator = appindicator.Indicator.new(APPINDICATOR_ID,APPINDICATOR_ICON_OFF,appindicator.IndicatorCategory.SYSTEM_SERVICES)
         self.indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
-        self.indicator.set_menu(gtk.Menu())
+        menu =  gtk.Menu()
+        self.status_label = gtk.MenuItem(label=self.get_last_line())
+        menu.append(self.status_label)
+        menu.show_all()
+        self.indicator.set_menu(menu)
         self.update_loop()
         gtk.main()
 
@@ -37,6 +41,7 @@ class Indicator:
             self.set_downloading_icon()
         else:
             self.set_uploading_icon()
+        self.status_label.set_label(self.get_last_line())
         print(status)
 
 
@@ -67,9 +72,7 @@ class Indicator:
         return Status.INACTIVE
 
     def get_status_from_journal_log(self):
-        process = os.popen(LAST_JOURNAL_LINE_COMMAND)
-        process_output = process.read()
-        process.close()
+        process_output = self.get_last_line()
         if "done" in process_output:
             return Status.ACTIVE
         if "Uploading" in process_output:
@@ -77,6 +80,12 @@ class Indicator:
         if "Downloading" in process_output:
             return Status.DOWNLOAD
         return Status.ACTIVE
+
+    def get_last_line(self):
+        process = os.popen(LAST_JOURNAL_LINE_COMMAND)
+        process_output = process.read()
+        process.close()
+        return process_output
 
 
 class Status(Enum):

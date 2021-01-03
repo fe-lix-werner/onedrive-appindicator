@@ -9,7 +9,7 @@ remove_indicator()
     sudo rm -rf /opt/onedrive-indicator/
 
     # Installing autostart desktop file
-    echo "Installing Onedrive Indicator service"
+    echo "Removing Onedrive Indicator service"
     rm $HOME/.config/systemd/user/onedrive-indicator.service
 
 }
