@@ -16,7 +16,7 @@ APPINDICATOR_ICON_UP = "/opt/onedrive-indicator/up.svg"
 APPINDICATOR_ICON_DOWN = "/opt/onedrive-indicator/down.svg"
 
 APPINDICATOR_ID = "onedrive-indicator"
-LAST_JOURNAL_LINE_COMMAND = "journalctl --user-unit onedrive | grep 'Uploading\|Downloading' | tail -n 1"
+LAST_JOURNAL_LINE_COMMAND = "journalctl --user-unit=onedrive | tail -n 1"
 
 class Indicator:
     def __init__(self):
@@ -74,7 +74,9 @@ class Indicator:
             return Status.ACTIVE
         if "Uploading" in process_output:
             return Status.UPLOADING
-        return Status.DOWNLOADING
+        if "Downloading" in process_output:
+            return Status.DOWNLOAD
+        return Status.ACTIVE
 
 
 class Status(Enum):
