@@ -23,8 +23,14 @@ class Indicator:
         self.indicator = appindicator.Indicator.new(APPINDICATOR_ID,APPINDICATOR_ICON_OFF,appindicator.IndicatorCategory.SYSTEM_SERVICES)
         self.indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
         menu =  gtk.Menu()
+        
         self.status_label = gtk.MenuItem(label=self.get_last_line())
         menu.append(self.status_label)
+        
+        restart_item =  gtk.MenuItem('Restart Onedrive Service')
+        restart_item.connect("activate",self.restart_process)
+        menu.append(restart_item)
+
         menu.show_all()
         self.indicator.set_menu(menu)
         self.update_loop()
@@ -87,6 +93,8 @@ class Indicator:
         process.close()
         return process_output
 
+    def restart_process(self, something):
+        os.popen('systemctl restart --user onedrive.service')
 
 class Status(Enum):
     ACTIVE = 1
